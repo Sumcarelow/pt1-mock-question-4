@@ -42,3 +42,19 @@ public:
 	string does(){ return newDoes; };
 };
 
+int main(){
+
+	Bird bird;
+	Dog dog;
+
+	Animal *pointer1 = &bird;
+	Animal *pointer2 = &dog;
+
+	pointer1->setValues("bird", "flys");
+	pointer1->setValues("dog", "barks");
+
+	cout << "The first animal is a " << pointer1->name() << "and it" << pointer1->does() << endl;
+	cout << "The second animal is a " << pointer2->name() << "and it" << pointer2->does() << endl;
+
+	return 0;
+}
